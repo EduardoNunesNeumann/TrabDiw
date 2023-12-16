@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Albuns</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="app.js" defer></script>
+  
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+         
+    #map { top:0; bottom:0; width:80%; }
+    </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="esquerda">
+      <a href="/index.html">
+        <img class="imglogo"   src="download.jpg">
+      </a>
+      <div class="direita">
+      <a href="detalhes.html?id=1"><h3>Álbum 1</h3></a>
+      <a href="detalhes.html?id=2"><h3>Álbum 2</h3></a>
+      <a href="login.html" id="loginLink"  style="display: none;"><h3>Login</h3></a>
+<a href="perfil.html" id="perfilLink" style="display: none;"><h3>Perfil</h3></a>
+
+    </div>
+    </div>
+    
+  </header>
+  <div class="destaquesfundo">
+    <hr>
+  <h1 class="cordestaques">Destaques</h1>
+  <hr>
+  </div>
+  
+  <div class="fundocarrossel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="torre-eiffel-paris.webp" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="torre-eiffel-paris.webp" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="torre-eiffel-paris.webp" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+
+  
+  <div class="destaquesfundo">
+    <hr>
+  <h1 class="cordestaques">Mapa</h1>
+  <hr>
+  </div>
+  <div class="boxmapa">
+    <div id='map'></div>
+  </div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWR1bnVuZXNuIiwiYSI6ImNscGxma2RrcDAzdWEyanBlYWJ4Y25yZ2MifQ.URgDFdzGbdaqGcaYhfE5MQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+});
+
+// Adicione seus marcadores aqui
+var marcadores = [
+    
+    { lng: 2.3522, lat: 48.8566 }, // Paris
+];
+
+marcadores.forEach(function(marcador) {
+    new mapboxgl.Marker()
+        .setLngLat([marcador.lng, marcador.lat])
+        .addTo(map);
+});
+
+// Obtenha as coordenadas de limite para todos os marcadores
+var limites = marcadores.reduce(function(limites, marcador) {
+    return limites.extend(marcador);
+}, new mapboxgl.LngLatBounds(marcadores[0], marcadores[0]));
+
+// Ajusta o mapa para caber todos os marcadores após o mapa ser carregado
+map.on('load', function() {
+    map.fitBounds(limites, { 
+        padding: 50, // Ajusta o mapa para caber todos os marcadores
+        maxZoom: 10 // Define o nível máximo de zoom
+    });
+});
+</script>
+
+<div class="destaquesfundo">
+  <hr>
+<h1 class="cordestaques">Albuns</h1>
+<hr>
+</div>
+<div id="outer-container">
+  <div id="album-container">
+</div>
+</div>
+<footer class="text-white">
+
+  <div class="text-center p-3" style="background-color: #FFDAB9">
+    Aluno: Eduardo Nunes Neumann
+Curso: Ciência da Computação
+Turma: Manhã
+  © 2023 Copyright
+  </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</body>
+</html>

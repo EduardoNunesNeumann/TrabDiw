@@ -1,0 +1,443 @@
+body {
+  background-color: antiquewhite !important;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+.album-page {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#album-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Isso permitirá que os itens se movam para uma nova linha quando não houver espaço suficiente */
+  justify-content: space-around;
+}
+
+.album {
+
+  width: 23%;
+  /* Isso permitirá que 4 álbuns caibam em uma linha */
+  margin: 1%;
+  /* Isso adicionará algum espaço entre os álbuns */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Isso adicionará uma sombra ao redor dos álbuns para dar a aparência de uma caixa */
+}
+
+.album-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 0;
+
+  width: 100%;
+
+}
+
+.item {
+  width: 24%;
+  margin: 0;
+  border: 1px solid #000;
+  padding: 0.5%;
+  border-radius: 5%;
+}
+
+
+#carouselExampleIndicators {
+  width: 80%;
+  /* Ajuste conforme necessário */
+  height: 60%;
+  /* Ajuste conforme necessário */
+  justify-content: center;
+  margin-left: 10%;
+  background-color: #FFDAB9;
+  border-radius: 5%;
+
+}
+
+.carousel-item img {
+  max-height: 60vh;
+  /* Ajuste conforme necessário */
+  object-fit: contain;
+}
+
+hr {
+  display: block;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-color: rgb(0, 0, 0);
+  margin-top: 0;
+
+}
+
+#album-header {
+  display: flex;
+  flex-direction: row;
+  /* Isso fará com que a imagem e a descrição sejam exibidas em uma linha */
+  justify-content: space-between;
+  /* Isso adicionará algum espaço entre a imagem e a descrição */
+  align-items: flex-start;
+  /* Isso alinhará a imagem e a descrição ao topo do contêiner */
+}
+
+.imagemalbum {
+  order: 1;
+  width: 20%;
+  border: 1px solid #000;
+  padding: 1%;
+  margin-right: 1%;
+  /* Isso adicionará algum espaço à direita da caixa da imagem */
+}
+
+#descricao {
+  order: 2;
+  width: 100%;
+  /* Ajuste a largura conforme necessário */
+  border: 1px solid #000;
+  padding: 1%;
+  background-color: white;
+  border-radius: 5%;
+}
+
+#data {
+  order: 4;
+}
+
+#itens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.item {
+  width: 23%;
+  /* Isso permitirá que 4 álbuns caibam em uma linha */
+  margin: 1%;
+  /* Isso adicionará algum espaço entre os álbuns */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Isso adicionará uma sombra ao redor dos álbuns para dar a aparência de uma caixa */
+  background-color: gray;
+  /* Cor de fundo da caixa do álbum */
+  border: 1px solid #000;
+  /* Borda da caixa do álbum */
+  border-radius: 5%;
+  /* Border radius da caixa do álbum */
+  padding: 10px;
+  /* Espaçamento interno da caixa do álbum */
+  transition: transform 0.3s ease-in-out;
+}
+
+.item h2 {
+  color: white;
+}
+
+.item p {
+  color: white;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+.direita * {
+  display: inline-block;
+}
+.direita {
+  
+  float: right;
+  margin-right: 5%;
+}
+.direita {
+  display: flex;
+  flex-direction: row;
+}
+.direita h3 {
+  display: inline-block;
+  margin: 0 0 0 2rem;
+}
+
+
+header {
+  margin: 0;
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 1%;
+  border-radius: 2%;
+  display: flex;
+  /* Isso fará com que a imagem e os links sejam exibidos em uma linha */
+  
+  /* Isso adicionará algum espaço entre a imagem e os links */
+}
+
+.esquerda {
+  display: inline-block;
+  width: 100%;
+}
+
+.esquerda h1 {
+  color: black;
+}
+
+#logo {
+
+  padding: 2px;
+  display: inline-block;
+  border-radius: 20px 0 20px 0;
+  border: 1px solid black;
+  background-color: lightgrey;
+  color: black;
+}
+
+.album img {
+  width: 100%;
+  /* Ajusta a largura da imagem para preencher a largura da caixa do álbum */
+  height: auto;
+  /* Ajusta a altura automaticamente para manter a proporção da imagem */
+}
+
+.album-container {
+  background-color: #f0f0f0;
+  /* Cor de fundo da caixa externa */
+  border: 1px solid #000;
+  /* Borda da caixa externa */
+  border-radius: 10%;
+  /* Border radius da caixa externa */
+  padding: 10px;
+  /* Espaçamento interno da caixa externa */
+}
+
+.album {
+  background-color: gray;
+  /* Cor de fundo da caixa do álbum */
+  border: 1px solid #000;
+  /* Borda da caixa do álbum */
+  border-radius: 5%;
+  /* Border radius da caixa do álbum */
+  padding: 10px;
+  /* Espaçamento interno da caixa do álbum */
+
+}
+
+.album {
+  transition: transform 0.3s ease-in-out;
+}
+
+.album:hover {
+  transform: scale(1.1);
+}
+
+#map {
+  width: 80%;
+  /* Ajuste a largura conforme necessário */
+  height: 60vh;
+  /* Ajuste a altura conforme necessário */
+  margin-left: 10%;
+  background-color: #000;
+}
+
+.item img {
+  width: 100%;
+  /* Ajusta a largura da imagem para preencher a largura da caixa do item */
+  height: auto;
+  /* Ajusta a altura automaticamente para manter a proporção da imagem */
+  border-radius: 5%;
+}
+
+.imagemalbum img {
+  width: 100%;
+  /* Ajusta a largura da imagem para preencher a largura da caixa da imagem */
+  height: auto;
+  /* Ajusta a altura automaticamente para manter a proporção da imagem */
+  object-fit: contain;
+  /* Garante que a imagem se ajuste à caixa, mantendo a proporção */
+  border-radius: 5%;
+}
+
+#nome-container {
+  order: 1;
+  width: 20%;
+  border: 1px solid #000;
+  padding: 1%;
+  margin-bottom: 1%;
+  display: block;
+  /* Isso fará com que o nome do álbum seja exibido em linha com a imagem e a descrição */
+  margin-left: 5%;
+}
+
+.imagemalbum {
+  order: 1;
+  width: 20%;
+  border: 1px solid #000;
+  padding: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  /* Isso adicionará algum espaço à esquerda da caixa da imagem */
+  border-radius: 5%;
+  background-color: lightgray;
+}
+
+#nome {
+  margin-bottom: 1%;
+  /* Isso adicionará algum espaço abaixo do nome do álbum */
+}
+
+#descricao-container {
+  order: 2;
+  width: 50%;
+  border: 1px solid #000;
+  padding: 1%;
+  border-radius: 5%;
+  background-color: lightgray;
+  margin-left: 0;
+  margin-right: 10%;
+}
+
+.formatimg {
+  order: 1;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  /* Isso adicionará algum espaço à esquerda da caixa da imagem */
+  border-radius: 5%;
+  background-color: white;
+}
+
+.fundocarrossel {
+
+  margin-top: 0;
+}
+
+.destaquesfundo {
+  background-color: lightblue;
+  margin-bottom: 0;
+
+}
+
+.cordestaques {
+  color: white;
+  margin-left: 5%;
+}
+
+header img {
+  width: 8%;
+  height: 8%;
+
+  margin-left: 5%;
+  padding: 2px;
+  display: inline-block;
+  border-radius: 20px 0 20px 0;
+  border: 1px solid black;
+  background-color: lightgrey;
+  color: black;
+}
+
+.album a {
+  color: white;
+  /* Isso fará com que o link tenha a mesma cor que o texto normal */
+  text-decoration: none;
+  /* Isso removerá o sublinhado */
+}
+
+.album a h2 {
+  font-size: 2em;
+  /* Isso define o tamanho da fonte para o nome do álbum */
+  color: white;
+}
+
+.album a:hover {
+  text-decoration: none;
+  /* Isso removerá o sublinhado quando o mouse passar sobre o link */
+}
+
+@media (max-width: 600px) {
+  .album {
+    flex: 1 0 100%;
+    /* Isso permitirá que apenas 1 álbum caiba em uma linha */
+    margin: 2%;
+  }
+}
+
+#outer-container {
+  background-color: lightgray;
+  /* Cor de fundo da caixa externa */
+  padding: 2%;
+  /* Espaçamento interno da caixa externa */
+  margin: 2%;
+  /* Espaçamento em relação às bordas da janela do navegador */
+
+
+}
+
+/* O Modal (fundo) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Adicione estas linhas para usar flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Centraliza o modal verticalmente */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Botão Fechar (x) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+a h3{
+  text-decoration: none;
+  color: #000;
+}
+.caixinha{
+  justify-content: center;
+}
+.logincentro{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
