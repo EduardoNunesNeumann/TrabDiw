@@ -54,10 +54,12 @@ main {
   margin-bottom: 1vh;
 }
 
-.posts {
-  margin-top: 2vh;
-}
 
+.posts {
+  display: flex;
+  flex-direction: column;
+  
+}
 .posts h2 {
   margin-bottom: 1vh;
 }
@@ -69,5 +71,34 @@ main {
 
 .posts textarea {
   resize: vertical;
+  margin-bottom: 1vh;
+}
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 2vw;
+  width: 100%;
+}
+#newPost {
+  width: 15%;
+  height: 25vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 2vw;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.plus {
+  font-size: 3em;
   margin-bottom: 1vh;
 }

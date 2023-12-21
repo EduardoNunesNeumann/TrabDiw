@@ -17,20 +17,20 @@
         <p id="nome">Nome</p>
         <p id="seguidores">Seguidores</p>
         <p id="dataCadastro"></p>
-        <button id="logoutButton">Sair</button>
-    </div>
-    <div class="descricaoperfil">
-        <h2>Descrição</h2>
-        <p id="descricao"></p>
-        <button id="editButton">Editar Perfil</button>
+        <div class="buttonContainer">
+            <button id="editButton">Editar Perfil</button>
+            <button id="logoutButton">Sair</button>
+        </div>
     </div>
     <div class="posts">
         <h2>Posts</h2>
-        <form id="postForm">
-            <label for="postText">Novo Post:</label><br>
-            <textarea id="postText" name="postText"></textarea><br>
-            <input type="submit" value="Postar">
-        </form>
+        <div id="newPost" onclick="location.href='newPost.html'">
+            <span class="plus">+</span>
+            <p>Novo Post</p>
+        </div>
+        <div class="postsGrid">
+            
+        </div>
     </div>
 </main>
 </body>

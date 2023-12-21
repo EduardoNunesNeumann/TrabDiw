@@ -20,3 +20,7 @@ window.onload = function() {
     // Redirecione o usuário para a página de login
     window.location.href = 'login.html';
   });
+  document.getElementById('editButton').addEventListener('click', function() {
+    // Redirecione o usuário para a página de edição do perfil
+    window.location.href = 'editProfile.html';
+});
